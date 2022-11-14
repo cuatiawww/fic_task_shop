@@ -12,12 +12,44 @@ class ListItem extends StatefulWidget {
 class _ListItemState extends State<ListItem> {
   @override
   Widget build(BuildContext context) {
+    List<String> product1 = [
+      'img1.jpg',
+      'kursi2.jpg',
+    ];
+    List<String> product1_name = [
+      'Stylish Chair',
+      'Modern Table',
+    ];
+    List<String> product1_value = [
+      'Rp. 699.999',
+      'Rp. 999.987',
+    ];
+    List<String> product1_rate = [
+      '4.2',
+      '4.5',
+    ];
+    List<String> product2 = [
+      'kursi3.jpg',
+      'kursi4.jpg',
+    ];
+    List<String> product2_name = [
+      'Wooden Console',
+      'Brown Armchair',
+    ];
+    List<String> product2_value = [
+      'Rp. 239.989',
+      'Rp. 699.978',
+    ];
+    List<String> product2_rate = [
+      '4.1',
+      '4.8',
+    ];
     return Column(
       children: [
         SizedBox(
           height: 264,
           child: ListView.builder(
-              itemCount: 2,
+              itemCount: product1.length,
               scrollDirection: Axis.horizontal,
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
@@ -37,7 +69,8 @@ class _ListItemState extends State<ListItem> {
                             topRight: Radius.circular(20),
                             topLeft: Radius.circular(20),
                           ),
-                          child: Image.asset('assets/images/img1.jpg'),
+                          child:
+                              Image.asset('assets/images/${product1[index]}'),
                         ),
                         Positioned(
                           top: 10,
@@ -60,7 +93,7 @@ class _ListItemState extends State<ListItem> {
                             EdgeInsets.symmetric(horizontal: 12, vertical: 14),
                         child: Center(
                           child: Text(
-                            'Stylist Chair',
+                            product1_name[index],
                             style: GoogleFonts.poppins(
                               fontSize: 14,
                               fontWeight: FontWeight.w500,
@@ -76,30 +109,30 @@ class _ListItemState extends State<ListItem> {
                           padding: EdgeInsets.only(left: 12),
                           child: Center(
                             child: Text(
-                              '\$170',
+                              product1_value[index],
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
                                 color: MyColor.grey,
-                                fontSize: 20,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.only(left: 55),
+                          padding: EdgeInsets.only(left: 10),
                           child: Center(
                             child: Icon(
                               Icons.star,
                               color: MyColor.yellowList,
-                              size: 15,
+                              size: 14,
                             ),
                           ),
                         ),
                         Container(
                           padding: EdgeInsets.only(right: 12),
                           child: Text(
-                            '4.8',
+                            product1_rate[index],
                             textAlign: TextAlign.left,
                             style: GoogleFonts.poppins(
                               fontSize: 12,
@@ -119,7 +152,7 @@ class _ListItemState extends State<ListItem> {
         SizedBox(
           height: 264,
           child: ListView.builder(
-              itemCount: 2,
+              itemCount: product2.length,
               scrollDirection: Axis.horizontal,
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
@@ -139,7 +172,8 @@ class _ListItemState extends State<ListItem> {
                             topRight: Radius.circular(20),
                             topLeft: Radius.circular(20),
                           ),
-                          child: Image.asset('assets/images/img1.jpg'),
+                          child:
+                              Image.asset('assets/images/${product2[index]}'),
                         ),
                         Positioned(
                           top: 10,
@@ -162,7 +196,7 @@ class _ListItemState extends State<ListItem> {
                             EdgeInsets.symmetric(horizontal: 12, vertical: 14),
                         child: Center(
                           child: Text(
-                            'Stylist Chair',
+                            product2_name[index],
                             style: GoogleFonts.poppins(
                               fontSize: 14,
                               fontWeight: FontWeight.w500,
@@ -178,30 +212,30 @@ class _ListItemState extends State<ListItem> {
                           padding: EdgeInsets.only(left: 12),
                           child: Center(
                             child: Text(
-                              '\$170',
+                              product2_value[index],
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
                                 color: MyColor.grey,
-                                fontSize: 20,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.only(left: 55),
+                          padding: EdgeInsets.only(left: 10),
                           child: Center(
                             child: Icon(
                               Icons.star,
                               color: MyColor.yellowList,
-                              size: 15,
+                              size: 14,
                             ),
                           ),
                         ),
                         Container(
                           padding: EdgeInsets.only(right: 12),
                           child: Text(
-                            '4.8',
+                            product2_rate[index],
                             textAlign: TextAlign.left,
                             style: GoogleFonts.poppins(
                               fontSize: 12,

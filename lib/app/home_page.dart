@@ -89,12 +89,43 @@ class _HomePageState extends State<HomePage> {
                 ),
                 SizedBox(height: 19),
                 const ListItem(),
-                const TabBottomBar(),
               ],
             ),
           ),
         ),
       ),
+      floatingActionButton: Container(
+        height: 70,
+        width: MediaQuery.of(context).size.width,
+        color: Colors.white,
+        // margin: const EdgeInsets.symmetric(
+        //   horizontal: 40,
+        //   vertical: 14,
+        // ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          // ignore: prefer_const_literals_to_create_immutables
+          children: [
+            const TabBottomBar(
+              imageNavbar: 'assets/images/homeic.png',
+              isActive: true,
+            ),
+            const TabBottomBar(
+              imageNavbar: 'assets/images/keranjang.png',
+              isActive: false,
+            ),
+            const TabBottomBar(
+              imageNavbar: 'assets/images/star.png',
+              isActive: false,
+            ),
+            const TabBottomBar(
+              imageNavbar: 'assets/images/person.png',
+              isActive: false,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
